@@ -1,0 +1,58 @@
+<%- include("./layouts/header") %>
+    <main class="Food-details">
+        <h2>Edit Menu</h2>
+        <p class="error"><%= error %></p>
+        <div class="form-container">
+           <form action="/menus/<%= menu._id %>?_method=PUT" method="post">
+                <div>
+                    <label for="name">
+                        <p>Food Name</p>
+                    </label>
+                     <input type="text" name="name" id="" value="<%= menu.name %>">
+                </div>
+                 <div>
+                    <label for="price">
+                        <p>Food Price</p>
+                    </label>
+                    <input type="number" name="price" id="" value="<%= menu.price %>">
+                </div>
+                <div>
+                    <label for="description">
+                        <p>Food Description</p>
+                    </label>
+                    <input type="text" name="description" id="" value="<%= menu.description %>">
+                </div>
+                <div>
+                    <label for="image">
+                        <p>Food Image URL</p>
+                    </label>
+                    <input type="string" name="image" id="" value="<%= menu.imageUrl %>">
+                </div>
+                <div>
+                    <label for="category">
+                        <p>Food Category</p>
+                    </label>
+                    <select name="category" id="">
+                        <option value="Swallow" 
+                        <% if (menu.category === 'Swallow') {%>
+                             selected 
+                            <% } %>
+                        >Swallow</option>
+                        <option value="Chew"
+                        <% if (menu.category === 'Chew') {%>
+                             selected 
+                            <% } %>
+                            >Chew</option>
+                        <option value="Snacks"
+                        <% if (menu.category === 'Snacks') {%>
+                             selected 
+                            <% } %>
+                            >Snacks</option>
+                    </select>
+                </div>
+                <input class="create-account" type="submit" value="Edit Food">
+            </form>
+        </div>
+
+    </main>
+    <%- include("./layouts/footer") %>

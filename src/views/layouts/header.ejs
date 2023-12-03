@@ -1,0 +1,57 @@
+<%- include("./_head.ejs") %>
+<header class="flex">
+  
+  <div>
+    <h3>Ciouz Food</h3>
+  </div>
+
+
+  <div class="flex">
+        
+    <div class="flex yellow div1">
+      <p><a href="/">Home</a></p>
+       <!--<img class="about-us" src="images/about us.png" alt="about-us-img"/>-->
+      <p><a href="/about-us">About Us</a></p>
+      <p><a href="/menus">Menu</a></p>
+    </div>
+
+    <div class="flex">
+          
+      <% if (adminSession) {  %>
+        <div class="flex">
+        <a href="/admin/profile">
+          <button class="Login">Profile</button>
+        </a>
+
+      <% } else if(userSession) {  %>
+      
+        <a href="/user/profile">
+          <button class="Login flex">Profile</button>
+        </a>
+      
+        <a href="/user/ordered">
+          <button class="Login flex">My Orders</button>
+        </a>
+        </div>
+      <%  }else { %>
+        <div class="flex">    
+          <a href="/user/login">
+              <button class="Login">Login</button>
+          </a>
+          <a href="/signup">
+              <button class="Login">Signup</button>
+          </a>
+        </div>
+      <% } %>
+      <img class="hamburger" src="../images/icon-hamburger.svg" onclick="navBar()" alt=""/>
+      <div class="hamburgerAbout yellow">
+        <p><a href="/">Home</a></p>
+        <p><a href="/about-us">About Us</a></p>
+        <p><a href="/menus">Menu</a></p>
+    
+      </div>
+    </div>
+  
+  </div>
+    
+ </header>

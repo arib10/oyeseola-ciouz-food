@@ -1,0 +1,402 @@
+/*....General.....*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'jonesy', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+}
+.center {
+    text-align: center;
+}
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex2 {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.yellow * {
+    margin: auto 10px;
+    color:#ffc244;
+    text-decoration: none;
+}
+.Login {
+    margin-right: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #ffc244;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: 600;
+    max-width: 150px;
+}
+.Login:active {
+    opacity: .5;
+}
+form, main.signup-form {
+    background-color: #ffc244;
+    padding: 50px;
+    width: 50%;
+}
+
+.create-account {
+    
+	background-color: hsl(192, 100%, 9%);
+	color: hsl(207, 100%, 98%);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .9em;
+    border-style: none;
+    margin: 20px auto;
+}
+.order-food {
+	background-color: hsl(192, 100%, 9%);
+	color: hsl(207, 100%, 98%);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .9em;
+    border-style: none;
+    border-radius: 10px;
+    /*margin: 20px;*/
+}
+.price-quantity {
+    width: 70%
+}
+.order-successful {
+    background-color: #ffc244;
+    padding: 50px;
+    width: 70%;
+}
+.food-error {
+    display: none;
+    color: red;
+}
+.check-price {
+    background-color: hsl(192, 100%, 9%);
+	color: hsl(207, 100%, 98%);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .9em;
+    border-style: none;
+   margin: 10px;
+}
+/*...........Header.........*/
+
+header {
+    padding: 40px;
+    font-weight: 600;
+    background-color: hsl(192, 100%, 9%);
+}
+
+img.hamburger {
+	display: none;
+    cursor: pointer;
+    position: relative;
+}
+.hamburgerAbout * {
+    font-weight: 700;
+    margin-bottom: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+div.hamburgerAbout {
+  /*  display: none; */
+    background-color: hsl(0, 0%, 100%);
+    width: 30%;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    right: 3%;
+    text-align: center;
+}
+div.hamburgerAbout *:active{
+    opacity: .5;
+}
+.div1 *:active{
+    opacity: .5;
+}
+
+/*........Main.......*/
+
+
+main.Food-details {
+    background-image: url("images/meats.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px;
+    width: 100%;
+/*    flex-wrap: wrap; */
+    min-height: calc(100vh - 150px);
+}
+main.Food-details *{
+    margin-bottom: 10px;
+    font-weight: 700px;
+}
+
+main.home, main.about-us {
+    background-color: #ffc244;
+    padding: 100px;
+}
+main .product {
+    background-color: #ffc244;
+}
+main > * {
+    color:white;
+}
+form div input {
+    padding: 5px 20px;
+}
+
+article.product {
+    width: 24%;
+    max-width: 300px;
+    min-width: 200px;
+    padding: 20px 30px;
+    margin: 10px 0px;
+}
+article.product > img {
+    width: 100%;
+}
+article.product .flex {
+    justify-content: space-between;
+}
+article.product .price::before {
+    content: "NGN";
+}
+ 
+.error {
+    color: red;
+}
+main.yellow * {
+    color:#fff;
+}
+main.yellow h2 {
+    font-size: 2rem;
+    max-width: 450px;
+    margin-right: 40px;
+}
+.meats {
+    border-radius: 15px;
+}
+
+h3 {
+    font-size: 3rem;
+    color: #ffc244;
+    max-width: 300px;
+    /*margin-right: 400px;*/
+}
+.access {
+    
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.wrap {
+    flex-wrap: wrap;
+}
+.border-radius {
+    border-radius: 50%;
+    animation: rotate 8s linear 3s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+h1 {
+    font-size: 10rem;
+}
+
+/*....Footer.....*/
+footer > div.flex {
+	background-color: hsl(192, 100%, 9%);
+ /*   background-color: red;*/
+	color: hsl(207, 100%, 98%);
+	padding: 10px 100px 50px;
+	background-size: 100%;
+}
+/*footer > img {
+	margin-bottom: -10px;
+	width: 100%;
+}*/
+footer > div.flex > div {
+	width: 40%;
+}
+footer > div.flex > div p {
+	font-size: .8rem
+}
+footer > div.flex > div:first-child {
+	min-width: 300px;
+}
+footer > div.flex > div > * {
+	margin: 15px 0px;
+}
+footer div h2 {
+	font-family: Poppins;
+	text-transform: uppercase;
+}
+footer p img {
+	width:15px;
+	margin-right: 10px;
+	margin-bottom: -2px;
+}
+footer .brands-icons {
+	margin-top: 200px;
+	color: #fff;
+	position:relative;
+	right: 400px;
+}
+	.brands-icons * {
+		padding: 15px;
+		font-size: 1.6rem;
+}
+footer div.brands-icons:hover {
+	color: cyan;
+}
+footer input {
+	padding: 5px;
+	min-width: 220px;
+	margin-right: 25px;
+}
+footer .btn {
+	padding: 5px 10px;
+	color: #fff;
+	background-color: #ffc244; 
+	border: 1px solid #ffc244;
+	font-weight: 600;
+	font-size: .9em;
+	border-radius: 2px;
+	cursor: pointer;
+}
+footer .btn:hover {
+	opacity: .8;
+}
+
+@media screen and (max-width:1300px) {
+    
+     main.yellow, .Food-details {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    main.home, main.about-us {
+        display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+form, main.signup-form {
+    width: 100%;
+}
+
+main.wrap {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+main {
+    padding: 80px 20px;
+}
+main > * {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.Login {
+    margin: 5px;
+}
+.yellow * {
+    margin: auto 4px;
+}
+.access {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 30px auto;
+}
+/*.div1 {
+    display: none;
+}*/
+main div h2 {
+    padding-bottom: 100px;
+}
+.food-checkprice {
+    flex-direction: column;
+}
+.border-radius {
+    width: 70%;
+}
+footer .brands-icons {
+	margin: auto;
+	color: #fff;
+	position:relative;
+	right: 20px;
+}
+
+footer > div.flex {
+    flex-direction: column-reverse;
+    padding: 5px 50px;
+}
+
+footer > div.flex > div {
+width: 100%;
+/*margin: 50px 0px;
+}*/
+footer > div.flex > div p {
+font-size: 1.2rem;
+max-width: 100%;
+}
+.form {
+    width: 300px;
+    text-align: right;
+}
+.form input {
+    width: 100%;
+    margin-bottom: 10px; 
+}
+}
+}
+@media screen and (max-width:700px) {
+ img.hamburger{
+    display: inline;
+    margin-left: 30px;  
+}
+.div1 {
+    display: none;
+}
+footer .brands-icons {
+	position: relative;
+	left: 0px;
+}   
+    
+footer > div.flex > div:first-child {
+	max-width: 500px;
+}
+}

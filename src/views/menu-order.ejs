@@ -1,0 +1,40 @@
+<%- include("./layouts/header") %>
+    <main class="Food-details">
+        <img src="<%= menu.imageUrl %>" alt="menu"/>
+        <h2><%= menu.name %></h2>
+        <p class="Login menu-price"><%= menu.price %></p>
+        <p class="desc"><%= menu.description %></p>
+        <p class="category"><%= menu.category.slice(0,1).toUpperCase() + menu.category.slice(1) %></p>
+            
+            <form class="price-quantity" action="/menus/<%= menu._id %>/order" 
+                method="post" 
+                onsubmit="return confirm('Are you sure you want to order food')"
+                >
+
+                <div class="flex food-checkprice">
+                    <label for="quantity">
+                        <p>Food Quantity</p>
+                        <p class="error"><%= error %></p>
+                    </label>
+                    <input type="number" name="quantity" class="food-quantity" oninput="foodPrice()" value="<%= form[0]?.quantity %>">
+
+                    <label for="price">
+                        <p>Food Price</p>
+                    </label>
+                    <input type="number" name="price" class="food-price" value="<%= form[0]?.price %>" placeholder="<%= menu.price %>" readonly>
+                </div>
+                    <div>
+                        <label for="location">
+                            <p>Location</p>
+                        </label>
+                    
+                        <% if (user) {%>
+                        <input type="text" name="location" id="location" value="<%= user.location %>">
+                        <%}%>
+                    </div>
+                 </div>
+                <p class="food-error">Food quantity cannot be zero or less than </p>
+                <button class="create-account" type="submit">Order Food</button>
+            </form>
+    </main>
+    <%- include("./layouts/footer") %>

@@ -1,0 +1,59 @@
+<%- include("./layouts/header") %>
+
+<main class="Food-details">
+    <h2>Add Menu</h2>
+    <p class="error"><%= error %></p>
+    <div class="form-container">
+       <form action="/menus" method="post">
+            <div>
+                <label for="name">
+                    <p>Food Name</p>
+                </label>
+                 <input type="text" name="name" id="" value="<%= form[0]?.name %>">
+            </div>
+             <div>
+                <label for="price">
+                    <p>Food Price</p>
+                </label>
+                <input type="number" name="price" id="" value="<%= form[0]?.price %>">
+            </div>
+            <div>
+                <label for="description">
+                    <p>Food Description</p>
+                </label>
+                <input type="text" name="description" id="" value="<%= form[0]?.description %>">
+            </div>
+            <div>
+                <label for="image">
+                    <p>Food Image URL</p>
+                </label>
+                <input type="string" name="image" id="" value="<%= form[0]?.image %>">
+            </div>
+            <div>
+                <label for="category">
+                    <p>Food Category</p>
+                </label>
+                <select name="category" id="">
+                    <option value="Swallows" 
+                    <% if (form[0]?.category && form[0].category === 'Swallows') {%>
+                         selected 
+                        <% } %>
+                    >Swallows</option>
+                    <option value="Chew"
+                    <% if (form[0]?.category && form[0].category === 'Chew') {%>
+                         selected 
+                        <% } %>
+                        >Chew</option>
+                    <option value="Snacks"
+                    <% if (form[0]?.category && form[0].category === 'Snacks') {%>
+                         selected 
+                        <% } %>
+                        >Snacks</option>
+                </select>
+            </div>
+            <input class="create-account" type="submit" value="create menu">
+        </form>
+    </div>
+
+</main>
+    <%- include("./layouts/footer") %>

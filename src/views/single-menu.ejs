@@ -1,0 +1,24 @@
+<%- include("./layouts/header") %>
+    <main class="Food-details">
+    
+        <article class="product">
+            <img src="<%= menu.imageUrl %>" alt="menu"/>
+            <h2><%= menu.name %></h2>
+            <p class="Login">NGN<%= menu.price %></p>
+            <p class="desc"><%= menu.description %></p>
+            <p class="category"><%= menu.category.slice(0,1).toUpperCase() + menu.category.slice(1) %></p>
+        
+        <% if (adminSession && adminSession === menu.admin.toString()) { %>
+            <a class="create-account" href="/menus/<%= menu._id %>/edit">Edit Food</a>
+            <form action="/menus/<%= menu._id %>?_method=DELETE" 
+                method="post" 
+                onsubmit="return confirm('Are you sure you want to delete food')"
+                >
+                <button class="create-account" type="submit">Delete Food</button>
+            </form>
+        <% } %>
+        </article>
+    
+    </main>
+    <%- include("./layouts/footer") %>
+    

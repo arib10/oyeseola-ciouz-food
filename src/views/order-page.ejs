@@ -1,0 +1,27 @@
+
+<%- include("./layouts/header.ejs") %>
+    
+<main class="Food-details yellow">
+    <h2>ORDER Successful</h2>
+    <hr>
+    <h2 class="center">Ordered Foods</h2>
+    <div class="flex wrap">
+ <% menus.forEach(function(menu, index) { %>
+     <article class="product">
+    <% if (menu.foodDetails) {%>
+        <img src="<%= menu.foodDetails.imageUrl %>" alt="">
+        <h2><%= menu.foodDetails.name %></h2>
+        <p class="category"><%= menu.foodDetails.category.slice(0,1).toUpperCase() + menu.foodDetails.category.slice(1) %></p>
+    <%}%>
+
+        <h3><%= menu.name %></h3>
+        <div class="flex">
+            <p class="price order-food"><%= menu.price %> </p>
+            <p class="order-food">Qty:<%= menu.quantity %> </p>
+        </div>
+        <h5 class="order-food">Location: <%= menu.location %> </h5>
+     </article>
+    <%  }) %>
+    </div>
+</main>
+<%- include("./layouts/footer") %>
